@@ -15,13 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from rest_framework import routers
-from board import views
-
-router = routers.DefaultRouter()
-router.register(r'boards', views.BoardViewSet)
+from rest_framework.documentation import include_docs_urls
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('api/v1/', include('core.urls.v1')),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('docs/', include_docs_urls(title='Newsletter API', public=False))
 ]
