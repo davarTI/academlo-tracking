@@ -33,16 +33,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+     # Apps creadas en el proyecto
+    'rest_framework',
+    'core',
+    'board',
+    'task',
+    'comment',
+    'safedelete',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Apps creadas en el proyecto
-    'rest_framework',
-    'core',
-    'board',
 ]
 
 MIDDLEWARE = [
