@@ -4,4 +4,4 @@ from .models import Board
 class BoardSerializer(serializers.ModelSerializer):
     class Meta:
         model = Board
-        fields = ('id', 'name', 'created_at',)
+        fields = ('id', 'project_id', 'name', 'created_at',)

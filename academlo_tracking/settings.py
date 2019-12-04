@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'board',
     'task',
     'comment',
+    'projects',
+    'workspaces',
     'safedelete',
     'django.contrib.admin',
     'django.contrib.auth',
